@@ -22,7 +22,8 @@ arcade.draw_polygon_filled(((500, 400),
 arcade.draw_ellipse_filled(300, 150, 210, 90, arcade.csscolor.LIGHT_BLUE)
 arcade.draw_ellipse_filled(300, 150, 200, 80, arcade.csscolor.BLUE)
 arcade.draw_circle_filled(75, 540, 40, arcade.csscolor.YELLOW)
-arcade.draw_rectangle_filled(100, 160, 10, 60, arcade.csscolor.BLACK) # tronco jaja salu2
+# Inicio de personaje
+arcade.draw_rectangle_filled(100, 160, 10, 60, arcade.csscolor.BLACK)
 arcade.draw_circle_filled(100, 200, 30, arcade.csscolor.SIENNA)
 arcade.draw_circle_filled(90, 208, 5, arcade.csscolor.BLACK)
 arcade.draw_circle_filled(110, 208, 5, arcade.csscolor.BLACK)
@@ -30,6 +31,7 @@ arcade.draw_line(100, 160, 150, 160, arcade.color.BLACK, 8)
 arcade.draw_line(100, 160, 50, 160, arcade.color.BLACK, 8)
 arcade.draw_line(100, 135, 120, 80, arcade.color.BLACK, 8)
 arcade.draw_line(100, 135, 80, 80, arcade.color.BLACK, 8)
+# Final de personaje
 arcade.draw_circle_filled(500, 200, 30, arcade.csscolor.BLUE)
 arcade.draw_line(470, 200, 530, 200, arcade.color.BLACK, 3)
 arcade.draw_line(500, 170, 500, 230, arcade.color.BLACK, 3)
