@@ -1,3 +1,6 @@
+
+# GAǗLEZ
+
 import random
 def main():
     print("Hola amigos, bienvenidos al juego del camello!!!")
@@ -74,6 +77,7 @@ def main():
         if distancia_recorrida >= 200:
             print("has ganado la partida!!!!")
             condicion = True
+            break
 
         if sed > 4:
             print("Tienes mucha sed...")
@@ -81,6 +85,7 @@ def main():
         elif sed > 6:
             print("Has muerto de sed...")
             condicion = True
+            break
 
         if cansancio_camello > 5:
             print("El camello se está agotando...")
@@ -88,10 +93,12 @@ def main():
         elif cansancio_camello > 8:
             print("El camello se ha muerto...")
             condicion = True
+            break
 
         if distancia_recorrida - distancia_nativos <= 0:
             print("Has perdido la partida, te ha pillado los nativos")
             condicion = True
+            break
         elif distancia_recorrida - distancia_nativos <= 15:
             print("Los Nativos están cerca...")
 main()

@@ -1,5 +1,5 @@
 import arcade
-def dibujardemas():
+def dibujar_demas():
     arcade.draw_lrtb_rectangle_filled(0, 599, 300, 0, arcade.csscolor.GREEN)
     arcade.draw_rectangle_filled(100, 320, 20, 60, arcade.csscolor.SIENNA)
     arcade.draw_circle_filled(100, 350, 30, arcade.csscolor.DARK_GREEN)
@@ -28,7 +28,7 @@ def dibujardemas():
                  arcade.color.BLACK, 24)
 
 # Inicio de personaje
-def dibujarpersona(x, y):
+def dibujar_persona(x, y):
     arcade.draw_rectangle_filled(x, 160, 10, 60, arcade.csscolor.BLACK)
     arcade.draw_circle_filled(x, 200, 30, arcade.csscolor.SIENNA)
     arcade.draw_circle_filled(x - 10, 208, 5, arcade.csscolor.BLACK)
@@ -46,8 +46,8 @@ def on_draw(delta_time):
     """ Draw everything """
     arcade.start_render()
 
-    dibujardemas()
-    dibujarpersona(on_draw.persona_x, 140)
+    dibujar_demas()
+    dibujar_persona(on_draw.persona_x, 140)
     on_draw.persona_x += 1
     if on_draw.persona_x >= 400:
         while on_draw.persona_x > 100:
