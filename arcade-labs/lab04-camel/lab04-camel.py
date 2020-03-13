@@ -101,4 +101,9 @@ def main():
             break
         elif distancia_recorrida - distancia_nativos <= 15:
             print("Los Nativos están cerca...")
+
+
 main()
+
+
+###

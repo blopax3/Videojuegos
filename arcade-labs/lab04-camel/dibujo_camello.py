@@ -1,4 +1,5 @@
 import arcade
+import random
 
 SCREEN_WIDTH = 1080
 SCREEN_HEIGHT = 720
@@ -20,14 +21,14 @@ def dibujo_camello(x, y):
 
 def dibujo_personaje(x, y):
 
-    arcade.draw_rectangle_filled(x + 100, 260, 4, 40, arcade.csscolor.BLACK) # torso
-    arcade.draw_circle_filled(x + 100, 280, 15, arcade.csscolor.SIENNA) # cara
-    arcade.draw_circle_filled(x + 95, 285, 2.5, arcade.csscolor.BLACK) # ojo
-    arcade.draw_circle_filled(x + 110, 285, 2.5, arcade.csscolor.BLACK) # ojo
-    arcade.draw_line(x + 100, 255, x + 125, 255, arcade.color.BLACK, 3)
-    arcade.draw_line(x + 100, 255, x + 75, 255, arcade.color.BLACK, 3)
-    arcade.draw_line(x + 100, 240, x + 110, 200, arcade.color.BLACK, 3)
-    arcade.draw_line(x + 100, 240, x + 90, 200, arcade.color.BLACK, 3)
+    arcade.draw_rectangle_filled(x + 100, y, 4, 40, arcade.csscolor.BLACK) # torso
+    arcade.draw_circle_filled(x + 100, y + 20, 15, arcade.csscolor.SIENNA) # cara
+    arcade.draw_circle_filled(x + 95, y + 25, 2.5, arcade.csscolor.BLACK) # ojo
+    arcade.draw_circle_filled(x + 110, y + 25, 2.5, arcade.csscolor.BLACK) # ojo
+    arcade.draw_line(x + 100, y - 5, x + 125, y - 5, arcade.color.BLACK, 3)
+    arcade.draw_line(x + 100, y - 5, x + 75, y - 5, arcade.color.BLACK, 3)
+    arcade.draw_line(x + 100, y - 20, x + 110, y - 60, arcade.color.BLACK, 3)
+    arcade.draw_line(x + 100, y - 20, x + 90, y - 60, arcade.color.BLACK, 3)
 
 
 
@@ -37,18 +38,17 @@ def on_draw(delta_time):
     arcade.start_render()
 
     dibujar_fondo()
-    dibujo_camello(jugador, 140)
-    dibujo_personaje(jugador, 140)
-    dibujo_personaje(enemigo, 140)
-   # draw_snow_person(450, 180)
-
-
-   # on_draw.snow_person1_x += 1
-
+    dibujo_camello(on_draw.jugadorx, on_draw.jugadory)
+    dibujo_personaje(on_draw.jugadorx, on_draw.jugadory)
+    dibujo_personaje(on_draw.enemigox - 30, on_draw.enemigoy + 20)
+    dibujo_personaje(on_draw.enemigox, on_draw.enemigoy)
+    ###
 
 # Create a value that our on_draw.snow_person1_x will start at.
-jugador = 250
-enemigo = -20
+on_draw.jugadorx = 250
+on_draw.jugadory = 270
+on_draw.enemigox = -20
+on_draw.enemigoy = 260
 
 
 def main():
